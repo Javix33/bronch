@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Menú</title>
+    <title>Contacto</title>
 </head>
 
 <body>
@@ -23,24 +23,32 @@
         </div>
     </header>
 
-    <section class="fullscreen-section">
-        <div class="menu-container">
-            <div class="slider-container">
+    <section class="fullscreen-section contacto">
+        <div class="container">
+            <h1>Formulario de Contacto</h1>
+            <form action="process_form.php" method="POST">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" placeholder="Nombre">
 
-                <div class="slider">
-                    <img src="./assets/menu/platillos.png" alt="Platillos">
-                    <img src="./assets/menu/paquetes.png" alt="Paquetes">
-                    <img src="./assets/menu/bebidas.png" alt="Bebidas">
-                </div>
-                <button class="prev-btn">Anterior</button>
-                <button class="next-btn">Siguiente</button>
-            </div>
+                <label for="email">Correo electrónico (obligatorio):</label>
+                <input type="email" id="email" name="email" required placeholder="Correo electrónico">
+
+                <label for="phone">Teléfono:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Teléfono">
+
+                <label for="visit_date">Fecha de la visita:</label>
+                <input type="date" id="visit_date" name="visit_date">
+
+                <label for="comments">Comentarios o dudas:</label>
+                <textarea id="comments" name="comments" rows="4" placeholder="Escribe aquí tus comentarios o dudas"></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
         </div>
 
-
-        </div>
         <!-- Content of the section -->
     </section>
+
 
     <footer class="footer">
         <div class="legal-info">
@@ -57,7 +65,6 @@
     </footer>
 
     <script src="./main.js"></script>
-    <script src="./slider.js"></script>
 </body>
 
 </html>
