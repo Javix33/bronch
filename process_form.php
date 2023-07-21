@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 
     // Construir el mensaje de correo electrónico
-    $to = "destinatario@example.com"; // Reemplaza con la dirección de correo del destinatario
+    $to = "javix33@hotmail.com"; // Reemplaza con la dirección de correo del destinatario
     $subject = "Mensaje de formulario de contacto";
 
     $message = "Nombre: " . $name . "\n";
