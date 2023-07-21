@@ -14,19 +14,37 @@
 
 <body>
     <!--header-->
-    <header class="sticky-header">
-        <div class="header-elements">
-            <span class="header-element"><a class="header-element-A" href="index.html">El bronch</a></span>
-            <span class="header-element"><a class="header-element-A" href="menu.html">Menú</a></span>
+    <header>
+        <nav class="sticky-header">
+            <div class="header-elements">
+                <span class="header-element"><a class="header-element-A" href="index.html">El bronch</a></span>
+                <span class="header-element"><a class="header-element-A" href="menu.html">Menú</a></span>
+            </div>
+            <div class="logo-container">
+                <img src="./assets/logo-.png" alt="Logo">
+            </div>
+            <div class="header-elements">
+                <span class="header-element"><a class="header-element-A" href="mapa.html">Ubicación</a></span>
+                <span class="header-element"><a class="header-element-A" href="contacto.html">Contacto</a></span>
+            </div>
+        </nav>
+        <!--Menu movil-->
+        <div class="navbar">
+            <div class="logo">
+                <img class="logo-movil" src="./assets/logo-.png" alt="">
+            </div>
+            <div class="hamburger-icon" onclick="toggleMenu()">&#9776;</div>
+            <nav class="nav-links" id="navLinks">
+                <a href="./index.html">El Bronch</a>
+                <a href="./menu.html">Menú</a>
+                <a href="./mapa.html">Ubicación</a>
+                <a href="./contacto.html">Contacto</a>
+            </nav>
         </div>
-        <div class="logo-container">
-            <img src="./assets/logo-.png" alt="Logo">
-        </div>
-        <div class="header-elements">
-            <span class="header-element"><a class="header-element-A" href="mapa.html">Ubicación</a></span>
-            <span class="header-element"><a class="header-element-A" href="contacto.html">Contacto</a></span>
-        </div>
+        <!--fin de menu movil-->
     </header>
+
+
     <!--final header-->
     <!--content start-->
     <section class="fullscreen-section">

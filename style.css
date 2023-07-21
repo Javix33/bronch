@@ -49,76 +49,82 @@
     color: white;
 }
 
-
-/* header end */
-
-
-/* content start */
-
-.fullscreen-section {
-    background-image: url('./assets/main-back.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    /* Changed 100% to 100vh */
-    position: relative;
-    z-index: 1;
-    margin-top: -10vh;
+@media (max-width: 767px) {
+    .sticky-header {
+        display: none;
+    }
 }
 
 
-/* modal start */
+/*menu hamburguesa*/
 
-.modal-container {
+.navbar {
+    display: none;
+    justify-content: space-around;
+    align-items: center;
     position: fixed;
-    /* Changed absolute to fixed */
+    z-index: 2;
+    width: 100%;
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.2);
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.logo-movil {
+    width: 80px;
+    height: auto;
+}
+
+.hamburger-icon {
+    font-size: 3rem;
+    cursor: pointer;
+    display: none;
+    color: #fff;
+}
+
+.nav-links {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(0, 0, 0, 0.5);
 }
 
-.modal-content {
-    /* Removed "background-color: none;" */
-    padding: 20px;
-    padding-top: 0px;
-    text-align: center;
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0 20px;
 }
 
-.modal-title {
-    color: white;
-    margin-top: 2.5rem;
-    /* Adjusted margin-top value */
-    margin-bottom: 15px;
-    font-size: 2.5rem;
-}
-
-.modal-text {
-    margin-left: 10%;
-    /* Adjusted margin-left value */
-    margin-right: 10%;
-    /* Adjusted margin-right value */
-    text-align: justify;
-    color: white;
-    font-size: 1rem;
-}
-
-.modal-text-1 {
-    margin-left: 10%;
-    /* Adjusted margin-left value */
-    margin-right: 10%;
-    /* Adjusted margin-right value */
-    text-align: center;
-    color: white;
-    font-size: 1.5rem;
+@media screen and (max-width: 767px) {
+    .hamburger-icon {
+        display: block;
+    }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 10vh;
+        left: 0;
+        width: 100%;
+        backdrop-filter: blur(10px);
+        background-color: rgba(0, 0, 0, 0.6);
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+    .nav-links a {
+        padding: 10px;
+        text-align: center;
+    }
+    .navbar {
+        display: flex;
+    }
 }
 
 
-/* modal end */
+/*fin menu hamburguesa*/
+
+
+/* header end */
 
 
 /* footer */
@@ -248,7 +254,103 @@
 }
 
 
-/* content end */
+/* Media query para pantallas menores a 768px */
+
+@media (max-width: 767px) {
+    .footer {
+        /* Estilos para el footer en pantallas menores a 768px */
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        /* Ajusta los estilos del footer para pantallas más pequeñas */
+    }
+    .social-icons {
+        /* Estilos para los íconos sociales en pantallas más pequeñas */
+        margin-top: 10px;
+        align-self: center;
+        width: 50%;
+    }
+    .coffee {
+        display: none;
+    }
+}
+
+
+/*fin de footer*/
+
+
+/*index styles*/
+
+
+/* content start */
+
+.fullscreen-section {
+    background-image: url('./assets/main-back.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    /* Changed 100% to 100vh */
+    position: relative;
+    z-index: 1;
+    padding-top: 10vh;
+}
+
+
+/* modal start */
+
+.modal-container {
+    position: fixed;
+    /* Changed absolute to fixed */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    /* Removed "background-color: none;" */
+    padding: 20px;
+    padding-top: 0px;
+    text-align: center;
+}
+
+.modal-title {
+    color: white;
+    margin-top: 2.5rem;
+    /* Adjusted margin-top value */
+    margin-bottom: 15px;
+    font-size: 2.5rem;
+}
+
+.modal-text {
+    margin-left: 10%;
+    /* Adjusted margin-left value */
+    margin-right: 10%;
+    /* Adjusted margin-right value */
+    text-align: justify;
+    color: white;
+    font-size: 1rem;
+}
+
+.modal-text-1 {
+    margin-left: 10%;
+    /* Adjusted margin-left value */
+    margin-right: 10%;
+    /* Adjusted margin-right value */
+    text-align: center;
+    color: white;
+    font-size: 1.5rem;
+}
+
+
+/* modal end */
+
+
+/*index end*/
 
 
 /* map styles */
@@ -257,7 +359,15 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    padding-top: 25vh;
+}
+
+@media screen and (max-width: 767px) {
+    .map-content {
+        flex-direction: column;
+    }
+    .address {
+        align-self: center;
+    }
 }
 
 .address {
@@ -283,6 +393,24 @@
 .map {
     border: #fff solid 2px;
     border-radius: 10px;
+    width: 600px;
+    height: 450px;
+}
+
+@media screen and (max-width: 767px) {
+    .map-content {
+        flex-direction: column;
+    }
+    .address {
+        align-self: center;
+    }
+    .map {
+        width: 100%;
+        height: 300px;
+    }
+    .mapa {
+        margin-top: 2vh;
+    }
 }
 
 .invitation {
@@ -302,19 +430,23 @@
 }
 
 
+/*fin de map*/
+
+
+/*menu page*/
+
+
 /*carrousel*/
 
 .menu-container {
-    padding-top: 16vh;
-    height: 70vh;
+    height: 100vh;
     display: flex;
-    align-items: center;
     justify-content: center;
 }
 
 .slider-container {
     position: absolute;
-    max-width: 600px;
+    max-width: 500px;
 }
 
 .slider {
@@ -339,15 +471,29 @@ button {
 }
 
 .prev-btn {
-    left: 10px;
+    left: -10vw;
 }
 
 .next-btn {
-    right: 10px;
+    right: -10vw;
+}
+
+@media screen and (max-width: 767px) {
+    .prev-btn {
+        top: 60vh;
+        left: 10vw;
+    }
+    .next-btn {
+        top: 60vh;
+        right: 10vw;
+    }
 }
 
 
 /*fin de carrousel*/
+
+
+/*fin de menu*/
 
 
 /*contacto*/
@@ -356,13 +502,14 @@ button {
     padding-top: 16vh;
 }
 
-.container {
+.contact-container {
     max-width: 400px;
     margin: 50px auto;
     padding: 20px;
     background-color: #2b2b2b;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-top: 10vh;
 }
 
 h1 {
