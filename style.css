@@ -480,12 +480,15 @@ button {
 
 @media screen and (max-width: 767px) {
     .prev-btn {
-        top: 60vh;
+        top: 50vh;
         left: 10vw;
     }
     .next-btn {
-        top: 60vh;
+        top: 50vh;
         right: 10vw;
+    }
+    .menu-container {
+        padding-top: 10vh;
     }
 }
 
