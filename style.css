@@ -458,7 +458,7 @@ img {
     height: auto;
 }
 
-button {
+.button-menu {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -545,7 +545,6 @@ input[type="date"] {
 
 button {
     padding: 10px;
-    margin-top: 20vh;
     border: none;
     background-color: #f0f0f0;
     color: #1a1a1a;
